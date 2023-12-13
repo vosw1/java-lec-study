@@ -12,7 +12,7 @@ public class FtoC {
         //System.out.println(f);
 
         //2. 화씨 -> 섭씨 온도로 변환
-        double c = 5.0 / 9.0 *(f - 32);
+        double c = 5.0 / 9.0 * (f - 32);
         System.out.println(c);
     }
 }
