@@ -1,6 +1,6 @@
 package ex02.example;
 
-public class Example4 {
+public class Example04 {
     public static void main(String[] args) {
         int P, Q;
         boolean p, q;

@@ -2,7 +2,7 @@ package ex02.example;
 
 import java.util.Scanner;
 
-public class Example2 {
+public class Example02 {
     public static void main(String[] args) {
         //1. 사용자로부터 마일값 읽어오기
         Scanner sc = new Scanner(System.in);
