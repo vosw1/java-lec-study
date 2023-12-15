@@ -2,7 +2,7 @@ package ex04;
 
 /**
  * JVM이 시작할때
- * 1. static 찾음 -> age, main
+ * 1. static (클래스 이름으로) 찾음 -> age, main
  * 2. main 찾아서 실행
  */
 class Person1{
