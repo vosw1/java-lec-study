@@ -6,8 +6,6 @@ public class ArrayTest1 {
 
         for (int i = 0; i < s.length; i++) {
             s[i] = i;
-        }
-        for (int i = 0; i < s.length; i++) {
             System.out.print(s[i] + " ");
         }
     }
