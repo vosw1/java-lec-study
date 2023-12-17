@@ -6,43 +6,35 @@ public class Example09 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        //1. 정수 입력받기
+        // 사용자로부터 정수 입력 받기
         System.out.print("정수: ");
-        int n = sc.nextInt();
+        int num = sc.nextInt();
 
-        //2. 2로 나누어 나머지 모으기
-        int num = 127 / 2;
-        int r1 = 127 % 2;
-        //System.out.println(num);
-        //System.out.println(r1);
+        // 음수일 경우 처리
+        if (num < 0) {
+            System.out.println("음수는 처리할 수 없습니다.");
+            return;
+        }
 
-        num = num /2;
-        int r2 = num % 2;
-        //System.out.println(num);
-        //System.out.println(r2);
+        // 2진수로 변환하여 출력
+        String binaryRepresentation = convertToBinary(num);
+        System.out.println(num + ": " + binaryRepresentation);
+    }
 
-        num = num /2;
-        int r3 = num % 2;
-        //System.out.println(num);
-        //System.out.println(r3);
+    // 정수를 2진수로 변환하는 메서드
+    private static String convertToBinary(int number) {
+        // 높은 자리부터 낮은 자리까지 2진수로 변환하여 저장
+        String binary = "";
+        while (number > 0) {
+            int remainder = number % 2; // 나머지 연산으로 현재 자리의 비트 구하기
+            binary = remainder + binary; // 현재 자리의 비트를 결과에 추가
+            number /= 2; // 다음 자리로 이동
+        }
 
-        num = num /2;
-        int r4 = num % 2;
-        //System.out.println(num);
-        //System.out.println(r4);
-
-        num = num /2;
-        int r5 = num % 2;
-        //System.out.println(num);
-        //System.out.println(r5);
-
-        num = num /2;
-        int r6 = num % 2;
-        //System.out.println(num);
-        //System.out.println(r6);
-
-        System.out.println(n + ": " + num + r1+r2+r3+r4+r5+r6);
-
-
+        // 만약 입력이 0인 경우에 대한 처리
+        if (binary.isEmpty()) {
+            binary = "0";
+        }
+        return binary;
     }
 }
