@@ -1,5 +1,6 @@
 package ex03.example;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Example12 {
@@ -8,18 +9,20 @@ public class Example12 {
         Scanner sc = new Scanner(System.in);
         double sum = 0;
         int count = 0;
-        int[] score = new int[4];
+        ArrayList<Integer> score = new ArrayList<>();
 
         // 1. 성적을 입력받아 배열에 넣기
-        for (int i = 0; i < score.length; i++) {
+        while (true) {
             System.out.print("성적을 입력하시오: ");
-            score[i] = sc.nextInt();
-            sum = sum + score[i];
+            int input = sc.nextInt();
+            score.add(input);
+            sum = sum + input;
             count++;
 
-            if (score[i] == -1){
+            if (input == -1){
                 break;
             }
+
         }
 
         // 3. 합계 및 평균 계산
