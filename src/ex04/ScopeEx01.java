@@ -10,6 +10,7 @@ public class ScopeEx01 {
     }
 
     void m2(){
+
         System.out.println("m2 : " + n1); // n1 = 1
     }
 
