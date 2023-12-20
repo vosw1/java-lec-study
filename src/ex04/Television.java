@@ -14,7 +14,7 @@ public class Television {
         Television yourTv = new Television();
         yourTv.channel = 9;
         yourTv.volume = 12;
-         yourTv.onOff = true;
+        yourTv.onOff = true;
 
         System.out.println("나의 텔레비전의 채널은 " + myTv.channel
                 + "이고 볼륨은 " + myTv.volume + "입니다.");
