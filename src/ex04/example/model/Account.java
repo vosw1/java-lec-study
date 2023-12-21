@@ -6,7 +6,6 @@ public class Account {
     private long balance;
     private int userId;
 
-
     // 잔액 확인(상태 확인)
     public boolean isBalanceInsufficient(long amount) {
         if(balance < amount){
@@ -14,6 +13,7 @@ public class Account {
         }
         return false;
     }
+
     // 메서드는 하나의 책임만 가짐
     public void withdrawal(long amount) { // 객체의 상태 변경
         this.balance = this.balance - amount;
