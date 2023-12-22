@@ -3,11 +3,9 @@ package ex05;
 import java.sql.SQLOutput;
 
 class President {
-
     static President instance = new President(); // main 실행전에 heap에 뜸
 
     private President(){
-
     }
 }
 
