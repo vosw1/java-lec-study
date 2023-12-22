@@ -27,7 +27,7 @@ class Triangle extends Shape0 {
     }
 }
 
-public class ShapeTest {
+public class ShapeTest00 {
     public static void main(String[] args) {
         Rectangle s = new Rectangle();
         s.draw();

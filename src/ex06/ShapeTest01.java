@@ -14,7 +14,7 @@ class Circle1 extends Shape1 {
     }
 }
 
-public class ShapeTest1 {
+public class ShapeTest01 {
     public static void main(String[] args) {
         Circle1 s = new Circle1();
         s.draw();
