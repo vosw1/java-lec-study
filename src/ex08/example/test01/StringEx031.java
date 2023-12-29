@@ -1,4 +1,4 @@
-package ex08.example;
+package ex08.example.test01;
 
 class ContractInfo {
     private int money;
@@ -47,7 +47,7 @@ class ContractInfo {
     }
 }
 
-public class StringEx03 {
+public class StringEx031 {
     public static void main(String[] args) {
         // 문서 데이터는 : 으로 구분된다.
         // 0 : 계약금
@@ -60,10 +60,22 @@ public class StringEx03 {
         String data = "100:서울분당:이창호:01033338888:hello@nate.com";
         String parse[] = data.split(":");
 
-        String[] d1s = data.split(":");
-        for (String d1 : d1s) {
-            System.out.println(d1);
+        // 데이터별로 분리
+        String[] infos = data.split(":");
+        for (String info : infos) {
+            System.out.println(info);
         }
 
+        // 데이터별 값을 집어넣어야 함
+        ContractInfo contractInfo = new ContractInfo
+                                        (Integer.parseInt(infos[0]),  // 계약금
+                                                           infos[1],   // 주소
+                                                           infos[2],   // 이름
+                                                           infos[3],   // 전화번호
+                                                           infos[4]    // 이메일
+        );
+
+        // ContractInfo 객체 출력
+        System.out.println(contractInfo);
     }
 }
