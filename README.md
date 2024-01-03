@@ -20,4 +20,6 @@
 - 이벤트리스너
 - 패키지
 - Object 클래스, String 클래스
-- 예외처리
+- 예외 처리(Exception, RuntimeException)
+- 제네릭(vs object)
+- 스레드(mainThread, subThread)
