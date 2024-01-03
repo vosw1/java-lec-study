@@ -22,4 +22,4 @@
 - Object 클래스, String 클래스
 - 예외 처리(Exception, RuntimeException)
 - 제네릭(vs object)
-- 스레드(mainThread, subThread)
+- 스레드(mainThread, subThread, 동기화)
