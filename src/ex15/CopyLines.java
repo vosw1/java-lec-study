@@ -10,23 +10,19 @@ public class CopyLines {
         try {
             inputStream = new BufferedReader(new FileReader("D:\\workspace\\java_lec\\study\\src\\ex15\\input.txt"));
             outputStream = new PrintWriter(new FileWriter("D:\\workspace\\java_lec\\study\\src\\ex15\\output.txt"));
-            String line;
-            while ((line = inputStream.readLine()) != null) {
-                outputStream.println(line);
-            }
+            String l;
 
-        } catch (Exception e) {
-            e.printStackTrace();
+            while ((l = inputStream.readLine()) != null) {
+                outputStream.println(l);
+                System.out.println(l);
+            }
         } finally {
-            try {
-                if (inputStream != null) {
-                    inputStream.close();
-                }
-                if (outputStream != null) {
-                    outputStream.close();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
+
+            if (inputStream != null) {
+                inputStream.close();
+            }
+            if (outputStream != null) {
+                outputStream.close();
             }
         }
     }
