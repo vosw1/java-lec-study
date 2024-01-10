@@ -29,7 +29,6 @@ public class Server {
             } else {
                 pw.println("프로토콜을 확인하세요 : 1은 영화, 2는 드라마");
             }
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
