@@ -11,9 +11,12 @@ public class Client {
     public static void main(String[] args) {
         try {
             // 1. 소켓과 버퍼 만들기
-            Socket socket = new Socket("192.168.0.44", 10000);
+            Socket socket = new Socket("192.168.0.44", 20000);
             Scanner sc = new Scanner(System.in);
             PrintWriter pw = new PrintWriter(socket.getOutputStream(), true);
+            BufferedReader br = new BufferedReader(
+                    new InputStreamReader(socket.getInputStream())
+            );
 
             // 2. 메시지 전송 스레드
             new Thread(() -> {
@@ -24,9 +27,6 @@ public class Client {
             }).start();
 
             // 3. 메시지 읽기 스레드
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader(socket.getInputStream())
-            );
             new Thread(() -> {
                 while (true) {
                     try {
@@ -37,7 +37,6 @@ public class Client {
                     }
                 }
             }).start();
-
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
