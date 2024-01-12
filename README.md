@@ -25,4 +25,4 @@
 - 스레드(mainThread, subThread, 동기화)
 - 컬렉션(벡터, ArrayList, LinkedList, Set, Map, Queue, Collections 클래스)
 - 통신(스트림, 버퍼, 소켓, IP)
-- HTTP(HTML)
+- HTTP(HTML
